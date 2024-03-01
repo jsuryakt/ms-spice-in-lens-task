@@ -1,0 +1,54 @@
+{
+  "id": "72835362-e64f-4e07-a397-31b80f60d611",
+  "version": "2.0",
+  "name": "microsoft-spice-in-lens-task",
+  "url": "https://dfpd.gov.in",
+  "tests": [{
+    "id": "48a8453b-d76f-4baa-acaa-06178e56867f",
+    "name": "download-first-pdf",
+    "commands": [{
+      "id": "b44f1748-0d1a-418e-8425-f3f3730bfa37",
+      "comment": "",
+      "command": "open",
+      "target": "/Home/DocumentReport?language=1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d520bca0-7ce2-47a6-860f-80d1b2ad9501",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x969",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff928d76-61c6-493c-8f19-df31bd15fe32",
+      "comment": "",
+      "command": "click",
+      "target": "css=.odd:nth-child(1) .img-fluid",
+      "targets": [
+        ["css=.odd:nth-child(1) .img-fluid", "css:finder"],
+        ["xpath=//img[@title='download']", "xpath:img"],
+        ["xpath=//table[@id='dataTable']/tbody/tr/td[3]/a/img", "xpath:idRelative"],
+        ["xpath=//td[3]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "940c89cd-cb9c-4636-868d-03d2e9c65a92",
+      "comment": "Wait for file download",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "10000"
+    }]
+  }],
+  "suites": [{
+    "id": "4a04f080-7f9b-48cf-b010-c79211e06a77",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["48a8453b-d76f-4baa-acaa-06178e56867f"]
+  }],
+  "urls": ["https://dfpd.gov.in/"],
+  "plugins": []
+}
